@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hancock Tian</title>
+<meta name="description" content="Hancock Tian — service systems, product and project management. I find where an internal process breaks, and replace it with a system.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111212;
+  --body:#3a3a3a;
+  --muted:#767676;
+  --faint:#9b9b9b;
+  --line:#e6e4e0;
+  --link:#1a3d5c;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:#fff;color:var(--body);
+  font-family:var(--sans);font-size:15.5px;line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:648px;margin:0 auto;padding:72px 28px 96px}
+
+h1,h2,h3{font-family:var(--serif);color:var(--ink);font-weight:400;letter-spacing:-.008em}
+h1{font-size:21px;line-height:1.3}
+h2{font-size:19px;line-height:1.35;margin-bottom:14px}
+h3{font-size:16.5px;line-height:1.4;margin-bottom:4px}
+
+p{margin-bottom:14px}
+p:last-child{margin-bottom:0}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:.6px;text-underline-offset:2.5px}
+a:hover{color:var(--ink)}
+em{font-style:italic}
+.ink{color:var(--ink)}
+.muted{color:var(--muted)}
+
+/* header */
+header{display:flex;align-items:center;gap:13px;margin-bottom:22px}
+header img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:top center;flex-shrink:0;background:#eee}
+.role{font-size:13.5px;color:var(--muted);line-height:1.45}
+
+/* sections */
+section{margin-top:44px}
+section.rule{border-top:1px solid var(--line);padding-top:38px}
+
+/* work entries */
+.entry{margin-bottom:30px}
+.entry:last-child{margin-bottom:0}
+.entry-meta{font-size:13px;color:var(--faint);margin-bottom:9px}
+.entry p{margin-bottom:11px}
+
+/* compact two-column rows */
+.line{
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 18px;
+  padding:9px 0;border-bottom:1px solid var(--line);
+}
+.line:first-of-type{border-top:1px solid var(--line)}
+.line-main{color:var(--ink)}
+.line-sub{font-size:13.5px;color:var(--faint);white-space:nowrap}
+.line-note{flex-basis:100%;font-size:13.8px;color:var(--muted)}
+
+/* labelled lines */
+.pair{display:grid;grid-template-columns:132px 1fr;gap:8px 18px;margin-bottom:9px}
+.pair:last-child{margin-bottom:0}
+.pair dt{font-size:13.5px;color:var(--faint)}
+.pair dd{font-size:14.8px}
+
+footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);font-size:13.5px;color:var(--faint)}
+
+@media (max-width:560px){
+  .page{padding:48px 22px 72px}
+  .pair{grid-template-columns:1fr;gap:1px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <img src="photo.jpg" alt="">
+  <div>
+    <h1>Hancock Tian</h1>
+    <div class="role">Service systems · product &amp; project management</div>
+  </div>
+</header>
+
+<p>I find where an internal process breaks, and replace it with a system. I am currently project
+lead for an AI self-service assistant serving SAP's worldwide partner ecosystem, sitting between
+frontline users, internal owning teams and engineering — close enough to the service desk to see
+where the process actually fails, and close enough to development to get it fixed.</p>
+
+<p>Seven years of this, in two industries. At Xiamen Air I sat between commercial teams,
+distribution channels and foreign carriers; at SAP I sit between partners, regional managers and
+developers. In both the job was the same: run a service operation at scale, find the friction,
+automate it away. Today that means around 3,000 service requests a year answered at an average
+first response of under an hour, down from 4.6 — delivered by automation and a rebuilt knowledge
+base rather than added headcount.</p>
+
+<p class="muted">Reach me at <a href="mailto:hancock.tian@sap.com">hancock.tian@sap.com</a>
+or +86 136 7103 1721. Based in Chengdu, China.
+The <a href="resume-external.pdf">résumé is here</a>.</p>
+
+<section class="rule">
+  <h2>Selected work</h2>
+
+  <div class="entry">
+    <h3>Conversational self-service assistant</h3>
+    <div class="entry-meta">Project lead &amp; project manager · in progress</div>
+    <p>A large share of inbound requests were repeat questions already answered somewhere in the
+    documentation. Users could not find the answer; agents re-typed it. Volume grew with the user
+    base; headcount did not.</p>
+    <p>I clustered a year of ticket history to work out which questions were actually deflectable,
+    then defined the product scope for an assistant built on the company's Joule platform and
+    rolled out to the global partner base. I agreed the staged release plan with engineering, set
+    up an evaluation set so answer quality could be measured rather than argued about, and ran
+    fortnightly feedback rounds with internal service teams and partner users.</p>
+    <p>It is live and iterating. Each release is judged on deflection rate and answer accuracy, not
+    on features shipped, and the backlog is re-prioritised from real usage data every cycle.</p>
+  </div>
+
+  <div class="entry">
+    <h3>RAG draft-reply pipeline</h3>
+    <div class="entry-meta">Designer &amp; builder · in production</div>
+    <p>Agents spent most of their handling time locating the right reference document and rewriting
+    the same explanation. The response SLA was under constant pressure for reasons that had nothing
+    to do with how hard the questions were.</p>
+    <p>I built an automation that takes an incoming ticket, retrieves the relevant documents from a
+    vector database, drafts a contextual reply, and then <em>stops</em> — holding the draft for
+    agent review before anything is sent. Human approval was a deliberate design constraint rather
+    than a limitation; it is what made the team willing to use it at all.</p>
+    <p>Drafting went from a manual research task to a sub-minute step, and the average first
+    response settled under an hour across 3,000+ annual requests.</p>
+  </div>
+
+  <div class="entry">
+    <h3>Agent-side AI assist in the live chat console</h3>
+    <div class="entry-meta">Designer &amp; builder · deployed across APAC</div>
+    <p>A multilingual APAC team answering a global user base in English: inconsistent tone, slow
+    message editing, and a constant context-switch to a translation tab.</p>
+    <p>Rather than propose a platform migration, I shipped a browser extension that injects a
+    polish action and an inline translation control directly into the chat console the agents
+    already use, backed by a small service calling the enterprise AI gateway. Less editing per
+    conversation, and noticeably more consistent replies across the region.</p>
+  </div>
+
+  <div class="entry">
+    <h3>Automated reporting pipeline</h3>
+    <div class="entry-meta">Designer &amp; builder · SAP, and earlier at Xiamen Air</div>
+    <p>Recurring operational reporting was assembled by hand each cycle — slow, and wrong often
+    enough that stakeholders had quietly stopped trusting it.</p>
+    <p>I replaced it with an ELT pipeline in Python: extraction, AI-assisted analysis, automated
+    publishing to Power BI, callable as a routine step rather than a monthly project. It now covers
+    85% of weekly reporting, with report latency down 40% and errors down 32%. The same approach
+    had earlier replaced a spreadsheet-based sales reporting cycle at Xiamen Air, cutting data
+    errors by 86%, from 5.3% to 0.8%.</p>
+  </div>
+</section>
+
+<section class="rule">
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <h3>SAP (China) Co., Ltd. — Partner Support Specialist</h3>
+    <div class="entry-meta">Jul 2022 – present · Chengdu, China</div>
+    <p>Project lead for Joule for Partner, an AI self-service assistant serving SAP's global
+    partner ecosystem: I own the problem definition, agree scope and release stages with
+    engineering, and run the feedback cycles that set the next iteration.</p>
+    <p>Alongside the product work I run day-to-day service operations — around 3,000 partner
+    requests a year at a sub-one-hour first response — and host weekly drop-in clinics with partner
+    managers, acting as the single bridge across internal owning teams until a case closes end to
+    end. I guided customers through implementation-partner transitions across 12 successful
+    showcases.</p>
+  </div>
+
+  <div class="entry">
+    <h3>Xiamen Air — Sales Analyst</h3>
+    <div class="entry-meta">Aug 2019 – Jul 2021 · Xiamen, China</div>
+    <p>Automated the sales reporting cycle, and built the regression and clustering models that fed
+    into pricing, lifting average ticket price by 18%. ROI analysis across distribution channels
+    led to moving 78% of marketing spend to the highest-return platform, taking monthly GMV to $3M.</p>
+    <p>Most of what I learned about stakeholders I learned here: I negotiated a codeshare agreement
+    with KLM — aligning schedules, inventory and commercial terms across two carriers, expanding
+    APAC coverage to 12 new destinations — and chaired quarterly pricing summits with competing
+    carriers. Cross-organisational alignment with no formal authority over anyone in the room.</p>
+  </div>
+</section>
+
+<section class="rule">
+  <h2>Skills</h2>
+  <dl>
+    <div class="pair"><dt>Product &amp; delivery</dt><dd>Product ownership · requirements and backlog · roadmap and release staging · agile delivery · stakeholder feedback loops</dd></div>
+    <div class="pair"><dt>Service operations</dt><dd>Ticketing and SLA management · knowledge base design · self-service deflection · escalation management · process redesign</dd></div>
+    <div class="pair"><dt>AI &amp; automation</dt><dd>RAG · vector databases · LangChain · CrewAI · LLM evaluation · workflow automation</dd></div>
+    <div class="pair"><dt>Data &amp; tools</dt><dd>Python · SQL · Power BI · Excel · ELT pipelines · FastAPI</dd></div>
+    <div class="pair"><dt>Working languages</dt><dd>English · Mandarin</dd></div>
+  </dl>
+</section>
+
+<section class="rule">
+  <h2>Certifications</h2>
+  <div class="line">
+    <a class="line-main" href="https://www.credly.com/badges/f05475b8-ba98-4fc1-ae9f-b2b83f0c007b/public_url" target="_blank" rel="noopener">AI Developer</a>
+    <span class="line-sub">SAP · Credly</span>
+  </div>
+  <div class="line">
+    <a class="line-main" href="https://www.credly.com/badges/c1f7bfb8-bca5-4a06-a5c5-f4834025c4c8/public_url" target="_blank" rel="noopener">Automate with SAP Build</a>
+    <span class="line-sub">SAP · Credly</span>
+  </div>
+  <div class="line">
+    <a class="line-main" href="https://www.credly.com/badges/a29ebe45-b0ba-4c5c-9e56-7bb0a74a6b48/public_url" target="_blank" rel="noopener">End-to-end product / solution knowledge</a>
+    <span class="line-sub">SAP · Credly</span>
+  </div>
+</section>
+
+<section class="rule">
+  <h2>Education</h2>
+  <div class="line">
+    <span class="line-main">Renmin University of China</span>
+    <span class="line-sub">Sep 2017 – Jul 2019</span>
+    <span class="line-note">Master's degree, international relations — study of NGO</span>
+  </div>
+  <div class="line">
+    <span class="line-main">Xiamen University</span>
+    <span class="line-sub">Sep 2013 – Jul 2017</span>
+    <span class="line-note">Bachelor's degree, international relations — comparative study of South East Asia</span>
+  </div>
+</section>
+
+<footer>
+  Hancock Tian · <a href="mailto:hancock.tian@sap.com">hancock.tian@sap.com</a> · 2026
+</footer>
+
+</div>
+</body>
+</html>
